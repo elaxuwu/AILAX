@@ -1,6 +1,6 @@
-import hearing
-import mouth
-import dabrain
+import body_parts.dabrain as dabrain
+import body_parts.hearing as hearing
+import body_parts.mouth as mouth
 
 import os
 from termcolor import colored, cprint
@@ -23,10 +23,10 @@ def start_AILAX():
     else:
         cprint("MOUTH is NOT ready! Please check your voice model setup.", "red", attrs=["bold", "blink"])
         
-    if dabrain.client or dabrain.OLLAMA_PERSONALITY:
+    if dabrain.GENERAL_MODEL or dabrain.GLOBAL_PERSONALITY:
         cprint("BRAIN is ready!", "yellow", attrs=["bold"])
     else:
-        cprint("BRAIN is NOT ready! Please check your API keys or Ollama setup.", "red", attrs=["bold", "blink"])
+        cprint("BRAIN is NOT ready! Please check your Models or Personality Setup.", "red", attrs=["bold", "blink"])
         
     mouth.speak("Hello boss! I'm AILAX. How can I help you today?")
     
