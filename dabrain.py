@@ -25,8 +25,8 @@ OLLAMA_PERSONALITY = (
 
 # setup models
 
-GEMINI_MODEL = "gemini-2.5-flash-lite"
-OLLAMA_MODEL = "llama3.2"
+GEMINI_MODEL = "gemini-2.5-flash-lite" # for searching online
+OLLAMA_MODEL = "llama3.2" # for general private tasks
 
 #keywords
 

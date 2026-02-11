@@ -11,7 +11,7 @@ from termcolor import colored, cprint
 print(colored("STARTING EARS!!!", "yellow", attrs=["bold"]))
 
 # ! CONFIGURATION
-model_size = "small" # Model size can be "tiny", "base", "small", "medium", "large"
+model_size = "base" # Model size can be "tiny", "base", "small", "medium", "large"
 model = WhisperModel(model_size, device="cpu", compute_type="int8")
 
 sd.default.device = (1, None)

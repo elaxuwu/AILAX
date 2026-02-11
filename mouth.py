@@ -77,5 +77,5 @@ def speak(text):
         
 if __name__ == "__main__":
     print("Testing TTS...")
-    speak("Hello guys I'm working")
+    speak("jew jew jew jew jew jew jew jew jew jew")
     wait = input("Press Enter to exit...")
