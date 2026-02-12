@@ -5,9 +5,10 @@ import numpy as np
 from piper.voice import PiperVoice
 from pvspeaker import PvSpeaker
 
-# paths
-model_path = "voice_models/en_US-amy-medium.onnx"
-config_path = "voice_models/en_US-amy-medium.onnx.json"
+# paths - use absolute paths to work in any IDE/terminal
+script_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Get parent directory
+model_path = os.path.join(script_dir, "voice_models/en_US-amy-medium.onnx")
+config_path = os.path.join(script_dir, "voice_models/en_US-amy-medium.onnx.json")
 
 voice = None
 speaker = None
@@ -42,7 +43,7 @@ if os.path.exists(model_path):
         speaker = PvSpeaker(
                             sample_rate=voice.config.sample_rate,
                             bits_per_sample=16,
-                            device_index=1,) 
+                            device_index=1,)
         speaker.start()
         print("Voice model loaded successfully. Herzt:", voice.config.sample_rate)
     except Exception as e:
