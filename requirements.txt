@@ -1,15 +1,15 @@
 # Core AI/ML Libraries
-ollama
-faster-whisper
-piper-tts
-pvspeaker
+ollama>=0.1.0
+faster-whisper>=0.7.0
+piper-tts>=1.2.0
+pvspeaker>=1.0.5
 
 # Audio Processing
-sounddevice
-soundfile
-numpy
-openwakeword
+sounddevice>=0.4.5
+soundfile>=0.12.1
+numpy>=1.24.0
+openwakeword>=0.6.0
 
-# Utilities
-termcolor
-
+# Web & Utilities
+requests>=2.31.0
+termcolor>=2.3.0

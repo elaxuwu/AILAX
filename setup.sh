@@ -70,7 +70,7 @@ echo ""
 # Check if Python is installed
 if ! command -v python3 &> /dev/null; then
     print_error "Python 3 is not installed or not in PATH!"
-    echo "Please install Python 3.7+ and try again."
+    echo "Please install Python 3.10+ and try again."
     echo ""
     exit 1
 fi
@@ -97,6 +97,13 @@ if [ ! -f "$REQUIREMENTS_FILE" ]; then
     echo "Please make sure requirements.txt is in the same directory as this script."
     echo ""
     exit 1
+fi
+
+# Verify Ollama is running
+print_info "Verifying Ollama is running..."
+if ! ollama list &> /dev/null; then
+    print_warning "Could not connect to Ollama. Make sure it's running."
+    echo ""
 fi
 
 # Step 1: Pull Ollama models
@@ -136,7 +143,7 @@ print_header "Step 2: Installing Python Packages"
 echo "Installing packages from requirements.txt..."
 echo ""
 
-python3 -m pip install -r "$REQUIREMENTS_FILE"
+pip3 install -r "$REQUIREMENTS_FILE"
 
 if [ $? -ne 0 ]; then
     echo ""
