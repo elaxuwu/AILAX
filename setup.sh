@@ -4,8 +4,10 @@
 # AILAX Setup Script for Mac/Linux
 # ============================================================
 # This script will:
-# 1. Install all required Python packages from requirements.txt
-# 2. Download the openwakeword models
+# 1. Check if Ollama is installed
+# 2. Pull required Ollama models
+# 3. Install all required Python packages from requirements.txt
+# 4. Download the openwakeword models
 #
 # Run this script before using AILAX for the first time.
 # ============================================================
@@ -48,6 +50,23 @@ print_warning() {
 # Main script starts here
 print_header "AILAX Setup Script v1.0"
 
+# Check if Ollama is installed
+print_info "Checking for Ollama installation..."
+if ! command -v ollama &> /dev/null; then
+    print_error "Ollama is not installed or not in PATH!"
+    echo ""
+    echo "Please install Ollama first:"
+    echo "  1. Visit https://ollama.com/download"
+    echo "  2. Download and install Ollama for your OS"
+    echo "  3. Run this setup script again"
+    echo ""
+    exit 1
+fi
+
+print_success "Ollama is installed:"
+ollama --version
+echo ""
+
 # Check if Python is installed
 if ! command -v python3 &> /dev/null; then
     print_error "Python 3 is not installed or not in PATH!"
@@ -80,8 +99,40 @@ if [ ! -f "$REQUIREMENTS_FILE" ]; then
     exit 1
 fi
 
-# Step 1: Install requirements
-print_header "Step 1: Installing Python Packages"
+# Step 1: Pull Ollama models
+print_header "Step 1: Pulling Ollama AI Models"
+echo "This may take a while depending on your internet connection..."
+echo ""
+
+echo "Pulling qwen3-vl:235b-instruct-cloud (General mode model)..."
+ollama pull qwen3-vl:235b-instruct-cloud
+
+if [ $? -ne 0 ]; then
+    echo ""
+    print_warning "Failed to pull qwen3-vl:235b-instruct-cloud"
+    echo "You may need to pull it manually later:"
+    echo "  ollama pull qwen3-vl:235b-instruct-cloud"
+    echo ""
+else
+    print_success "qwen3-vl:235b-instruct-cloud pulled successfully!"
+fi
+
+echo ""
+echo "Pulling qwen3-coder-next:cloud (Coding mode model)..."
+ollama pull qwen3-coder-next:cloud
+
+if [ $? -ne 0 ]; then
+    echo ""
+    print_warning "Failed to pull qwen3-coder-next:cloud"
+    echo "You may need to pull it manually later:"
+    echo "  ollama pull qwen3-coder-next:cloud"
+    echo ""
+else
+    print_success "qwen3-coder-next:cloud pulled successfully!"
+fi
+
+# Step 2: Install requirements
+print_header "Step 2: Installing Python Packages"
 echo "Installing packages from requirements.txt..."
 echo ""
 
@@ -102,8 +153,8 @@ else
     print_success "All packages installed successfully!"
 fi
 
-# Step 2: Download openwakeword models
-print_header "Step 2: Downloading OpenWakeWord Models"
+# Step 3: Download openwakeword models
+print_header "Step 3: Downloading OpenWakeWord Models"
 echo "Downloading openwakeword models..."
 echo ""
 
@@ -120,7 +171,7 @@ else
     print_success "OpenWakeWord models downloaded successfully!"
 fi
 
-# Step 3: Summary
+# Step 4: Summary
 print_header "Setup Complete!"
 print_success "All setup steps have been completed."
 echo ""

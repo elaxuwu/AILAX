@@ -7,6 +7,19 @@ from termcolor import colored
 print(colored("STARTING BRAIN!!!", "yellow", attrs=["bold"]))
 
 # ============================================================
+# REQUIRED OLLAMA MODELS
+# ============================================================
+# Before running this script, make sure you have installed Ollama
+# from https://ollama.com/download and pulled these models:
+#
+# Run these commands in your terminal:
+#   ollama pull qwen3-vl:235b-instruct-cloud
+#   ollama pull qwen3-coder-next:cloud
+#
+# These models are used for General and Coding modes respectively.
+# ============================================================
+
+# ============================================================
 # Personality
 # ============================================================
 

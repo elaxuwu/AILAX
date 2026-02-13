@@ -11,10 +11,22 @@ no virus here pookie, dont worry :3
 
 ## Prerequisites
 - [Python 3.10](https://www.python.org/downloads/) or higher installed on your machine
+- **[Ollama](https://ollama.com/download)** - Download and install the Ollama app for your operating system
 
 ## Setup Instructions
 
-### For Windows:
+### Step 1: Install Ollama
+1. Download Ollama from [https://ollama.com/download](https://ollama.com/download)
+2. Install Ollama on your system
+3. Make sure Ollama is running (it should start automatically after installation)
+4. **Login to your Ollama account** (inside the Ollama app) - This is required to use the cloud models
+
+> **Note:** AILAX uses cloud models (`qwen3-vl:235b-instruct-cloud` and `qwen3-coder-next:cloud`) which require an Ollama account. You can switch to local models if you prefer, but they'll run on your local machine and require a good computer.
+
+### Step 2: Run Setup Script
+The setup script will **automatically** pull the required AI models, install Python packages, and download OpenWakeWord models.
+
+**For Windows:**
 1. Clone this repository to your local machine.
 2. Navigate to the project directory.
 3. Double-click `setup.bat` or run in terminal:
@@ -22,7 +34,7 @@ no virus here pookie, dont worry :3
    .\setup.bat
    ```
 
-### For Mac/Linux:
+**For Mac/Linux:**
 1. Clone this repository to your local machine.
 2. Navigate to the project directory in your terminal.
 3. Make the script executable and run it:
@@ -36,10 +48,12 @@ no virus here pookie, dont worry :3
    bash setup.sh
    ```
 
-## What the Setup Does
-- Installs all required Python packages (ollama, faster-whisper, piper-tts, openwakeword, etc.)
-- Downloads OpenWakeWord models automatically
-- Prepares AILAX to run on your system
+## What the Setup Script Does
+- ✅ Checks if Ollama is installed
+- ✅ **Automatically pulls required AI models** (`qwen3-vl:235b-instruct-cloud` and `qwen3-coder-next:cloud`)
+- ✅ Installs all required Python packages (ollama, faster-whisper, piper-tts, openwakeword, etc.)
+- ✅ Downloads OpenWakeWord models automatically
+- ✅ Prepares AILAX to run on your system
 
 ## Running AILAX
 After setup is complete:
