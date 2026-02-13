@@ -183,3 +183,4 @@ cython_debug/
 .env
 input.wav
 ailax_memory.json
+.idea
