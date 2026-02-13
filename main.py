@@ -3,7 +3,7 @@ import body_parts.hearing as hearing
 import body_parts.mouth as mouth
 
 import os
-from termcolor import colored, cprint
+from termcolor import cprint
 
 def start_AILAX():
     

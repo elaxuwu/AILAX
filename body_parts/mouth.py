@@ -43,7 +43,7 @@ if os.path.exists(model_path):
         speaker = PvSpeaker(
                             sample_rate=voice.config.sample_rate,
                             bits_per_sample=16,
-                            device_index=1,)
+                            device_index=0,)
         speaker.start()
         print("Voice model loaded successfully. Herzt:", voice.config.sample_rate)
     except Exception as e:

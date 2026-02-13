@@ -9,7 +9,29 @@ no virus here pookie, dont worry :3
 
 <hr>
 
+# License
+
+This software is **licensed** under the **PolyForm Noncommercial License 1.0.**
+
+In simple terms, this is **similar** to **CC BY-NC 4.0**:
+
+    Attribution: You must credit me.
+
+    Non-Commercial: You cannot sell this or use it for business.
+
+See the [LICENSE](LICENSE) file for the full legal text.
+
+<hr>
+
 # Update Logs:
+
+## v1.2:
+
+This patch focus on the Brain (again).
+
+Main Changes:
+- Added MEMORY to AILAX! It can now remember what you said! The default limit is 10 interactions, but you can change it in the settings section in main.py!
+- That's all... 
 
 ## v1.0:
 
@@ -25,17 +47,3 @@ Main Changes:
 - Added new models for each mode (Gemma 3 for General; Deepseek v3.2 for Coding)
 
 -Updated new system instruction message logic
-
-<hr>
-
-# License
-
-This software is **licensed** under the **PolyForm Noncommercial License 1.0.**
-
-In simple terms, this is **similar** to **CC BY-NC 4.0**:
-
-    Attribution: You must credit me.
-
-    Non-Commercial: You cannot sell this or use it for business.
-
-See the [LICENSE](LICENSE) file for the full legal text.
