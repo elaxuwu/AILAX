@@ -5,6 +5,8 @@ I make this for fun (and for [my portfolio](https://elaxuwu.me) too :3 (hi futur
 
 no virus here pookie, dont worry :3
 
+and also please check out [my profile](https://elaxuwu.me.)!
+
 <hr>
 
 ## 📑 Table of Contents
