@@ -1,0 +1,15 @@
+# Core AI/ML Libraries
+ollama
+faster-whisper
+piper-tts
+pvspeaker
+
+# Audio Processing
+sounddevice
+soundfile
+numpy
+openwakeword
+
+# Utilities
+termcolor
+

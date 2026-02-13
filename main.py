@@ -2,6 +2,9 @@ import body_parts.dabrain as dabrain
 import body_parts.hearing as hearing
 import body_parts.mouth as mouth
 
+import openwakeword
+from openwakeword.model import Model
+
 import os
 from termcolor import cprint
 

@@ -29,7 +29,7 @@ CODING_MODEL = "qwen3-coder-next:cloud"
 # Keywords
 # ============================================================
 
-SWITCHING_MODE_KEYWORDS = ["switch mode", "change mode"]
+SWITCHING_MODE_KEYWORDS = ["switch mode", "change mode", "switch mod"]
 
 GENERAL_MODE_KEYWORDS = ["general mode", "normal mode", "general"]
 CODING_MODE_KEYWORDS = ["coding mode", "code mode", "code"]
