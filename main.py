@@ -2,17 +2,14 @@ import body_parts.dabrain as dabrain
 import body_parts.hearing as hearing
 import body_parts.mouth as mouth
 
-import openwakeword
-from openwakeword.model import Model
-
 import os
 from termcolor import cprint
 
-def start_AILAX():
+def start_ailax():
     
     os.system('cls' if os.name == 'nt' else 'clear')
     cprint("========================================", "cyan", attrs=["bold"])
-    cprint("          WELCOME TO AILAX v1.0     ", "cyan", attrs=["bold"])
+    cprint("          WELCOME TO AILAX v1.3     ", "cyan", attrs=["bold"])
     cprint("An AI Personal Assistant created by elax", "cyan", attrs=["bold"])
     cprint("========================================", "cyan", attrs=["bold"])
     
@@ -62,4 +59,4 @@ def start_AILAX():
             cprint(f"An error occurred: {e}", "red", attrs=["bold"])
             
 if __name__ == "__main__":
-    start_AILAX()
+    start_ailax()

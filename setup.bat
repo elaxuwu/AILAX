@@ -6,7 +6,6 @@ REM This script will:
 REM 1. Check if Ollama is installed
 REM 2. Pull required Ollama models
 REM 3. Install all required Python packages from requirements.txt
-REM 4. Download the openwakeword models
 REM
 REM Run this script before using AILAX for the first time.
 REM ============================================================
@@ -123,29 +122,7 @@ if errorlevel 1 (
     echo [SUCCESS] All packages installed successfully!
 )
 
-REM Step 3: Download openwakeword models
-echo.
-echo ============================================================
-echo   Step 3: Downloading OpenWakeWord Models
-echo ============================================================
-echo.
-echo Downloading openwakeword models...
-echo.
-
-python -c "from openwakeword.utils import download_models; download_models()"
-
-if errorlevel 1 (
-    echo.
-    echo [ERROR] Failed to download OpenWakeWord models.
-    echo You can try manually running:
-    echo   python -c "from openwakeword.utils import download_models; download_models()"
-    echo.
-) else (
-    echo.
-    echo [SUCCESS] OpenWakeWord models downloaded successfully!
-)
-
-REM Step 4: Summary
+REM Step 3: Summary
 echo.
 echo ============================================================
 echo   Setup Complete!

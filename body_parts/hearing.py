@@ -9,7 +9,7 @@ from termcolor import colored
 print(colored("STARTING EARS!!!", "yellow", attrs=["bold"]))
 
 # ! CONFIGURATION
-model_size = "base" # Model size can be "tiny", "base", "small", "medium", "large"
+model_size = "small" # Model size can be "tiny", "base", "small", "medium", "large"
 model = WhisperModel(model_size, device="cpu", compute_type="int8")
 
 sd.default.device = (1, None)
@@ -18,7 +18,7 @@ print(f"Using device: {sd.query_devices(sd.default.device[0])['name']}")
 # Get project root directory for file paths
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-def record_audio(filename="input.wav", duration=5, samplerate=16000):
+def record_audio(filename="input.wav", duration=7, samplerate=16000):
     # Use absolute path if relative path is provided
     if not os.path.isabs(filename):
         filename = os.path.join(project_root, filename)
