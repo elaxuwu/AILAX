@@ -7,6 +7,8 @@ no virus here pookie, dont worry :3
 
 and also please check out [my profile](https://elaxuwu.me.)!
 
+thank you!
+
 <hr>
 
 ## 📑 Table of Contents
@@ -33,6 +35,7 @@ and also please check out [my profile](https://elaxuwu.me.)!
    - [8. Add Custom Voice Commands](#8-add-custom-voice-commands-)
    - [9. Change Audio Device](#9-change-audio-device-)
    - [10. Customize Startup Messages](#10-customize-startup-messages-)
+   - [11. Setup Custom Wake Word](#11-setup-custom-wake-word-)
    - [Configuration Summary](#configuration-summary)
 
 4. [Troubleshooting](#troubleshooting)
@@ -52,10 +55,10 @@ and also please check out [my profile](https://elaxuwu.me.)!
 # Installation Guide
 
 ## Prerequisites
-- [Python 3.10](https://www.python.org/downloads/) or higher installed on your machine
-- **[Ollama](https://ollama.com/download)** - Download and install the Ollama app for your operating system
-- Internet connection (for downloading models)
-- Microphone and speakers (for audio input/output)
+- [Python 3.10](https://www.python.org/downloads/) or higher _- of course bro, this is a Python project..._
+- **[Ollama](https://ollama.com/download)** _- for running AI models (locally or cloud)_
+- Internet connection _- i think you have this already 😊_
+- Microphone and speakers _- do I even have to explain..._
 
 ## Setup Instructions
 
@@ -117,18 +120,21 @@ After setup is complete, simply run:
 5. **Exit**: Type 'q' and press ENTER to quit
 
 ### AI Modes
-AILAX supports two modes:
-- **General Mode** (default): Uses `qwen3-vl:235b-instruct-cloud` for general conversation
+AILAX currently have two modes:
+- **General Mode** (default): Uses `qwen3-vl:235b-instruct-cloud` for general conversations
 - **Coding Mode**: Uses `qwen3-coder-next:cloud` for programming assistance
 
-You can switch modes by saying: `"switch mode coding"` or `"switch mode general"`
+You can switch modes by saying: `"switch mode coding"` or `"switch mode general"`!
 
 ### Memory
-AILAX remembers your last 10 interactions. Clear memory by saying: `"clear memory"` or `"reset memory"`
+By default, AILAX  remembers your last 10 interactions! Clear memory by saying: `"clear memory"` or `"reset memory"`
+Go to [6. Change Memory Limit](#6-change-memory-limit-) to change how many interactions AILAX can remember!
 
 ## Customization & Settings
 
-Make AILAX your own! Here's how to customize various aspects:
+Make AILAX your own slav-...I mean AI assistant (pls don't hurt me when yall invade earth...)! Here's how to customize various aspects:
+
+_(Note: Tell me you know basic coding and Python before reading these stuff...pwease...?)_
 
 ### 1. **Change the AI Personality** 📝
 Edit `body_parts/dabrain.py` and modify the `GLOBAL_PERSONALITY` variable:
@@ -151,7 +157,7 @@ GLOBAL_PERSONALITY = (
 - Add role: `"You are a Python expert"` or `"You are a motivational coach"`
 
 ### 2. **Switch AI Models** 🤖
-_⚠️(It is recommended to use the default models because I've tested lots of different models and picked out the best ones, but you can switch to other Ollama models if you want!)⚠️_
+_⚠️(It is recommended to use the default models cuz I've tested lots of different models and picked out the best ones, but you can switch to other Ollama models if you want!)⚠️_
 
 Edit `body_parts/dabrain.py` to use different Ollama models:
 
@@ -190,10 +196,10 @@ SPEAKING_SPEED = 0.7  # Range: 0.5 (very fast) to 1.5 (very slow)
 ```
 
 **Speed guide:**
-- `0.5` - Very fast, like an auctioneer
-- `0.7` - Default, natural speed
-- `1.0` - Slower, more deliberate
-- `1.5` - Very slow, for clarity
+- `0.5` - Very fasttttttt, like an auctioneer
+- `0.7` - Default, natural speed (at least for me)
+- `1.0` - Slower, more deliberate 
+- `1.5` - Very slow, for clarity (trust, you dont wanna try this out)
 
 ### 4. **Adjust Speech Recognition** 🎧
 Edit `body_parts/hearing.py` to change audio settings:
@@ -238,7 +244,7 @@ MEMORY_LIMIT = 10  # How many interactions to remember
 - `MEMORY_LIMIT = 50` - Remember up to 50 exchanges (requires more RAM)
 
 ### 7. **Add Custom Voice Models** 🎤
-Replace the voice model with your own:
+Replace the default voice model with your own:
 
 1. Download a new Piper TTS model from [Piper voices](https://github.com/rhasspy/piper/releases)
 2. Extract to `voice_models/` directory
@@ -297,6 +303,40 @@ Change the greeting to anything you want:
 mouth.speak("Hey! I'm AILAX. Ready to assist you!")
 ```
 
+### 11. **Setup Custom Wake Word** 🎙️🔥
+Instead of pressing ENTER every time, activate AILAX with your voice using a custom wake word (like "Hey AILAX" or "OK Computer")!
+This was added in the v1.4 update!
+
+**Quick Setup:**
+```bash
+cd tools
+python lwake-setup.py
+```
+or just run `lwake-setup.py`.
+
+The interactive tool will guide you through:
+1. ✅ Choosing your wake word phrase
+2. ✅ Recording 3-5 voice samples
+3. ✅ Testing the detection
+4. ✅ Adjusting sensitivity settings
+
+**📖 For a complete step-by-step guide, see:**
+- **Full Documentation**: [`tools/WAKEWORD_SETUP_README.md`](tools/WAKEWORD_SETUP_README.md)
+
+The full guide includes:
+- Best practices for recording
+- Threshold tuning guide
+- Integration examples
+- Troubleshooting tips
+- Advanced configuration
+
+**Requirements:**
+- The `local-wake` package (already in requirements.txt)
+- A working microphone
+- Quiet environment for recording
+
+Once set up, your wake word samples are saved in the `wakeword_samples/` folder and ready to integrate into AILAX for hands-free activation!
+
 ## Configuration Summary
 
 | Setting | File | Line | Default | What It Does |
@@ -311,6 +351,7 @@ mouth.speak("Hey! I'm AILAX. Ready to assist you!")
 | Audio Device | hearing.py | 15 | Device 1 | Which mic/speaker to use |
 
 ## Troubleshooting
+(Uh.. for other errors that you can't find here, open an issue on Github, or email me (there's a not 0% chance that I will see it 😺))
 
 ### Setup Issues
 - **"Ollama is not installed or not in PATH"**: Install Ollama from https://ollama.com/download
@@ -349,10 +390,16 @@ AILAX/
 │   ├── hearing.py         # Ears - audio recording & speech-to-text
 │   └── mouth.py           # Mouth - text-to-speech synthesis
 ├── tools/
-│   └── findMicID.py       # Utility to find your microphone ID
-└── voice_models/          # TTS voice models
-    ├── en_US-amy-medium.onnx
-    └── en_US-amy-medium.onnx.json
+│   ├── findMicID.py              # Utility to find your microphone ID
+│   ├── lwake-setup.py            # Wake word setup tool
+│   └── WAKEWORD_SETUP_README.md  # Wake word documentation
+├── voice_models/          # TTS voice models
+│   ├── en_US-amy-medium.onnx
+│   └── en_US-amy-medium.onnx.json
+└── wakeword_samples/      # Your custom wake word recordings (created after setup)
+    ├── sample_1.wav
+    ├── sample_2.wav
+    └── ...
 ```
 
 <hr>

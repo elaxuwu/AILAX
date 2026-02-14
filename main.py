@@ -2,6 +2,8 @@ import body_parts.dabrain as dabrain
 import body_parts.hearing as hearing
 import body_parts.mouth as mouth
 
+import lwake
+
 import os
 from termcolor import cprint
 

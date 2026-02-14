@@ -184,3 +184,7 @@ cython_debug/
 input.wav
 ailax_memory.json
 .idea
+
+# Wake word samples (user-specific voice recordings)
+wakeword_samples/
+
