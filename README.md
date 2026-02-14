@@ -76,7 +76,7 @@ git clone https://github.com/yourusername/AILAX.git
 cd AILAX
 ```
 
-Or download the ZIP from GitHub and extract it.
+Or download the ZIP from [GitHub releases](https://github.com/elaxuwu/AILAX/releases)(yes, this link, use latest stable version) and extract it. (pls use stable version, i don't have trust in BETAs)
 
 ### Step 3: Run the Automatic Setup Script
 The setup script will **automatically**:
