@@ -11,6 +11,7 @@
 ## Reporting a Vulnerability
 
 **Contact me at:**
+
 Email: ngocthienbaod@gmail.com (10% of me seeing your message)
 
 Discord: elaxuwu (100% I'm gonna see your message)
