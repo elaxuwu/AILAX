@@ -9,7 +9,6 @@ sounddevice>=0.4.5
 soundfile>=0.12.1
 numpy>=1.24.0
 
-local-wake
 
 # Web & Utilities
 requests>=2.31.0

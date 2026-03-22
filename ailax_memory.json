@@ -30,5 +30,13 @@
   {
     "role": "assistant",
     "content": "The secret number you gave me was 168423. In descending order, that’s: 864321. Got it? Let me know if you need anything else!"
+  },
+  {
+    "role": "user",
+    "content": " 666666666666"
+  },
+  {
+    "role": "assistant",
+    "content": "Elax, that’s a lot of sixes! 666666666666. Need me to do anything with it? Count them, reverse them, or something else? Just say the word!"
   }
 ]

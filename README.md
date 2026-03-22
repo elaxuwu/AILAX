@@ -35,7 +35,6 @@ thank you!
    - [8. Add Custom Voice Commands](#8-add-custom-voice-commands-)
    - [9. Change Audio Device](#9-change-audio-device-)
    - [10. Customize Startup Messages](#10-customize-startup-messages-)
-   - [11. Setup Custom Wake Word](#11-setup-custom-wake-word-)
    - [Configuration Summary](#configuration-summary)
 
 4. [Troubleshooting](#troubleshooting)
@@ -303,39 +302,6 @@ Change the greeting to anything you want:
 mouth.speak("Hey! I'm AILAX. Ready to assist you!")
 ```
 
-### 11. **Setup Custom Wake Word** 🎙️🔥
-Instead of pressing ENTER every time, activate AILAX with your voice using a custom wake word (like "Hey AILAX" or "OK Computer")!
-This was added in the v1.4 update!
-
-**Quick Setup:**
-```bash
-cd tools
-python lwake-setup.py
-```
-or just run `lwake-setup.py`.
-
-The interactive tool will guide you through:
-1. ✅ Choosing your wake word phrase
-2. ✅ Recording 3-5 voice samples
-3. ✅ Testing the detection
-4. ✅ Adjusting sensitivity settings
-
-**📖 For a complete step-by-step guide, see:**
-- **Full Documentation**: [`tools/WAKEWORD_SETUP_README.md`](tools/WAKEWORD_SETUP_README.md)
-
-The full guide includes:
-- Best practices for recording
-- Threshold tuning guide
-- Integration examples
-- Troubleshooting tips
-- Advanced configuration
-
-**Requirements:**
-- The `local-wake` package (already in requirements.txt)
-- A working microphone
-- Quiet environment for recording
-
-Once set up, your wake word samples are saved in the `wakeword_samples/` folder and ready to integrate into AILAX for hands-free activation!
 
 ## Configuration Summary
 
@@ -391,8 +357,6 @@ AILAX/
 │   └── mouth.py           # Mouth - text-to-speech synthesis
 ├── tools/
 │   ├── findMicID.py              # Utility to find your microphone ID
-│   ├── lwake-setup.py            # Wake word setup tool
-│   └── WAKEWORD_SETUP_README.md  # Wake word documentation
 ├── voice_models/          # TTS voice models
 │   ├── en_US-amy-medium.onnx
 │   └── en_US-amy-medium.onnx.json
