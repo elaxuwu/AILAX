@@ -378,6 +378,8 @@ In simple terms, this is **similar** to **CC BY-NC 4.0**:
 
     Non-Commercial: You cannot sell this or use it for business.
 
+All trademarks and logos are the property of the original author and are not licensed under this agreement.
+
 See the [LICENSE](LICENSE) file for the full legal text.
 
 <hr>
